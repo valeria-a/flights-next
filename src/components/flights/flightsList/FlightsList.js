@@ -14,15 +14,15 @@ const FlightsList = ({initialData}) => {
 
     const fetchData = async () => {
         const flightsData = await getFlights(flights.next)
-        console.log(flightsData)        
+        // console.log(flightsData)        
         setFlights((flights) => { 
             return {...flightsData, results:[...flights.results, ...flightsData.results]}
         })
     }
 
     const hasNext = flights.count > flights.results.length
-    console.log('has next:', hasNext)
-    console.log('flights', flights)
+    // console.log('has next:', hasNext)
+    // console.log('flights', flights)
 
     // useEffect(() => {
     //     fetchData()

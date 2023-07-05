@@ -1,41 +1,20 @@
-"use client"
-
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import { Stack } from '@mui/material';
+// import { getServerSession } from "next-auth/next"
+import HeaderContent from "./headerContent"
+// import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+// import { getUserData } from "@/infra/requests"
 
 
 
-const Header = () => {
+const Header = async () => {
+
+
+  // const session = await getServerSession(authOptions)
+  // console.log(session)
+  
+  // const user = await getUserData()
 
     return(
-
-        <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-            </IconButton>
-            <Typography variant="h6" component="div">
-              Sun Airlines
-            </Typography>
-            <Box sx={{flexGrow: 1}}>
-            </Box>
-            <Stack direction={'column'}>
-            </Stack>
-          </Toolbar>
-        </AppBar>
-        </Box>
+      <HeaderContent />
 
     )
 }
